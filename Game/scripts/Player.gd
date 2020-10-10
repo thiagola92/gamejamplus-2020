@@ -7,7 +7,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-		if Input.is_key_pressed(KEY_A):
-			position.x -= 150 * delta
-		elif Input.is_key_pressed(KEY_D):
-			position.x += 150 * delta
+	if Input.is_key_pressed(KEY_A):
+		position.x -= 150 * delta
+	elif Input.is_key_pressed(KEY_D):
+		position.x += 150 * delta
