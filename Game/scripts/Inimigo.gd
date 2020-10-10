@@ -16,12 +16,19 @@ func _process(delta):
 	position.x += speed * direction * delta
 	$Health.text = str(health)
 	
+	if len(targets) <= 0:
+		$AnimatedSprite.play("run")
+		speed = 400
+		
 	for target in targets:
 		if can_attack && target.get_name() == "Wall":
 			can_attack = false
 			
-			target.hit()
+			var alive = target.hit()
 			$AttackTimer.start()
+			
+			if alive == false:
+				targets.erase(target)
 			
 			break
 
