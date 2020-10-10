@@ -6,15 +6,20 @@ extends KinematicBody2D
 # var b = "text"
 
 var direcao
+var WALKING_SPEED = 150
 
 func _physics_process(delta):
-	move_and_slide(direcao * 150)
+	var collision = move_and_collide(direcao * delta)
+	if (collision):
+		$AnimatedSprite.stop()
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	direcao = Vector2()
-	direcao.x = 1
-	
+	direcao.x = WALKING_SPEED
+	$AnimatedSprite.play("run")
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

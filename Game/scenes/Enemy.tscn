@@ -22,7 +22,7 @@ animations = [ {
 } ]
 
 [node name="Node2D" type="KinematicBody2D"]
-position = Vector2( 56.76, 323.676 )
+position = Vector2( 4.43944, 232.932 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -32,5 +32,3 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 45.6237, -62.8673 )
 frames = SubResource( 2 )
-frame = 5
-playing = true
