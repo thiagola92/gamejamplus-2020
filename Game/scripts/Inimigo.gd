@@ -1,29 +1,18 @@
-extends KinematicBody2D
+extends Area2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-var direcao
-var WALKING_SPEED = 150
-
-func _physics_process(delta):
-	var collision = move_and_collide(direcao * delta)
-	if (collision):
-		if (collision.CONNECT_PERSIST):
-			$AnimatedSprite.play("attack")
-	else:
-		 $AnimatedSprite.play("run")
-	
+export var speed = 400
+export var direction = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	direcao = Vector2()
-	direcao.x = WALKING_SPEED
 	$AnimatedSprite.play("run")
-		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	position.x += speed * direction * delta
+
+func _on_Enemy_area_entered(area):
+	$AnimatedSprite.play("attack")
+	speed = 0
+	
+	area

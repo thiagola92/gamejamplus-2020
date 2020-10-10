@@ -28,15 +28,16 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Node2D" type="KinematicBody2D"]
-position = Vector2( 4.43944, 232.932 )
+[node name="Enemy" type="Area2D"]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 32.3318, -61.0711 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 45.6237, -62.8673 )
 frames = SubResource( 2 )
 animation = "run"
+[connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]

@@ -73,11 +73,11 @@ tile_data = PoolIntArray( 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0
 position = Vector2( 513.099, 473.023 )
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 66.563, 486.414 )
+position = Vector2( 52.7039, 429.347 )
 z_index = 1
 
 [node name="Wall" parent="." instance=ExtResource( 3 )]
-position = Vector2( 227.452, 426.855 )
+position = Vector2( 434.822, 422.005 )
 scale = Vector2( 0.7, 0.7 )
 script = null
 
@@ -90,6 +90,7 @@ color = Color( 0.933333, 0.901961, 0.54902, 1 )
 energy = 0.61
 
 [node name="bg" type="Sprite" parent="."]
+visible = false
 position = Vector2( 540.732, 320.986 )
 scale = Vector2( 4.2508, 2.55031 )
 z_index = -1
