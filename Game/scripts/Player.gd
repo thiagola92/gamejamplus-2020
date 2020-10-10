@@ -12,3 +12,4 @@ func _process(delta):
 		position.x -= speed * delta
 	elif Input.is_key_pressed(KEY_D):
 		position.x += speed * delta
+	
