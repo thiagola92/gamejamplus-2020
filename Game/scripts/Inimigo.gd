@@ -11,7 +11,10 @@ var WALKING_SPEED = 150
 func _physics_process(delta):
 	var collision = move_and_collide(direcao * delta)
 	if (collision):
-		$AnimatedSprite.stop()
+		if (collision.CONNECT_PERSIST):
+			$AnimatedSprite.stop()
+	else:
+		 $AnimatedSprite.play("run")
 	
 
 # Called when the node enters the scene tree for the first time.
