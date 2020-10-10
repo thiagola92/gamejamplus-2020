@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grassCliffRightAlt.png-461aab9986421ba083b20fababeeffe4.stex"
+path="res://.import/tiles_sheet.png-dec53ee5b72e0bb9b280661d3c6ab77d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grass/grassCliffRightAlt.png"
-dest_files=[ "res://.import/grassCliffRightAlt.png-461aab9986421ba083b20fababeeffe4.stex" ]
+source_file="res://assets/tilesets/tiles_sheet.png"
+dest_files=[ "res://.import/tiles_sheet.png-dec53ee5b72e0bb9b280661d3c6ab77d.stex" ]
 
 [params]
 

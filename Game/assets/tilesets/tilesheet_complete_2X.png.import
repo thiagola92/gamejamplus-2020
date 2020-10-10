@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grassHalf.png-34b0e62c16e3cce7b467f9e4a9f9d72a.stex"
+path="res://.import/tilesheet_complete_2X.png-103a81055742b7801be5ab495fa53e16.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grass/grassHalf.png"
-dest_files=[ "res://.import/grassHalf.png-34b0e62c16e3cce7b467f9e4a9f9d72a.stex" ]
+source_file="res://assets/tilesets/tilesheet_complete_2X.png"
+dest_files=[ "res://.import/tilesheet_complete_2X.png-103a81055742b7801be5ab495fa53e16.stex" ]
 
 [params]
 
