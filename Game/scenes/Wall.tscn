@@ -5,17 +5,17 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Area2D
 
+export var health = 100
 
-func _physics_process(delta):
-	pass
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+		$Health.text = str(health)
+
+func hit():
+	health -= 1
+	print(health)
 "
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -53,6 +53,9 @@ extents = Vector2( 43.5834, 126.613 )
 
 [node name="Wall" type="Area2D"]
 script = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -61,3 +64,17 @@ shape = SubResource( 2 )
 tile_set = SubResource( 3 )
 format = 1
 tile_data = PoolIntArray( -65537, 1, 0, 65535, 0, 0 )
+
+[node name="Health" type="Label" parent="."]
+margin_left = -113.326
+margin_top = -197.556
+margin_right = 0.67395
+margin_bottom = -153.556
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "health"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

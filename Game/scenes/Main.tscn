@@ -79,9 +79,8 @@ position = Vector2( 55.3257, 430.977 )
 z_index = 1
 
 [node name="Wall" parent="." instance=ExtResource( 3 )]
-position = Vector2( 426.727, 418.614 )
+position = Vector2( 427, 418 )
 scale = Vector2( 0.7, 0.7 )
-script = null
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 124.615, 92.2835 )
@@ -104,11 +103,17 @@ __meta__ = {
 position = Vector2( 334.667, 280.82 )
 z_index = -1
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="set2_tiles2" type="Sprite" parent="."]
 position = Vector2( 974.07, 281.074 )
 z_index = -1
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Guarana" parent="." instance=ExtResource( 8 )]
 position = Vector2( 643.515, 447.929 )
