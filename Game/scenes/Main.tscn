@@ -75,11 +75,11 @@ tile_data = PoolIntArray( 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0
 position = Vector2( 513.099, 473.023 )
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 66.563, 486.414 )
+position = Vector2( 55.3257, 430.977 )
 z_index = 1
 
 [node name="Wall" parent="." instance=ExtResource( 3 )]
-position = Vector2( 227.452, 426.855 )
+position = Vector2( 426.727, 418.614 )
 scale = Vector2( 0.7, 0.7 )
 script = null
 
@@ -96,6 +96,9 @@ position = Vector2( 540.732, 320.986 )
 scale = Vector2( 4.2508, 2.55031 )
 z_index = -1
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="set2_tiles" type="Sprite" parent="."]
 position = Vector2( 334.667, 280.82 )
