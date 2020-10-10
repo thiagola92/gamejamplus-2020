@@ -35,7 +35,15 @@ func get_buff(buffs):
 	else:
 		walking = "normal_walking"
 		flip_walking = "flip_normal_walking"
+		
+	var timer = get_parent().get_node("Buff_Time")
+	timer.start()
+	
 
 func lost_buff():
 	walking = "normal_walking"
 	flip_walking = "flip_normal_walking"
+
+
+func _on_Buff_Time_timeout():
+	lost_buff()
