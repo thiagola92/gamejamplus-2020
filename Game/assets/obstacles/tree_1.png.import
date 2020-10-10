@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sem Título-1.png-72b71c988f182e1066a7d7d3acaf5a08.stex"
+path="res://.import/tree_1.png-e0b0fd296b63d9ee7638c6fb7dc52d0e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemy/Sem Título-1.png"
-dest_files=[ "res://.import/Sem Título-1.png-72b71c988f182e1066a7d7d3acaf5a08.stex" ]
+source_file="res://assets/obstacles/tree_1.png"
+dest_files=[ "res://.import/tree_1.png-e0b0fd296b63d9ee7638c6fb7dc52d0e.stex" ]
 
 [params]
 
