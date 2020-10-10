@@ -10,7 +10,7 @@
 [ext_resource path="res://scenes/Buffs.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Buff_Pice.tscn" type="PackedScene" id=9]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 508.202, 68.3993 )
 
 [sub_resource type="TileSet" id=2]
@@ -64,7 +64,7 @@ position = Vector2( -2.24572, -23.1038 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 516.258, 576.24 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="TileMap" type="TileMap" parent="Area2D"]
 tile_set = SubResource( 2 )
