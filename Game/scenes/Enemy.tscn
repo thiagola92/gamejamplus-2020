@@ -30,9 +30,6 @@ animations = [ {
 
 [node name="Enemy" type="Area2D"]
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -41,5 +38,19 @@ shape = SubResource( 1 )
 frames = SubResource( 2 )
 animation = "run"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="AttackTimer" type="Timer" parent="."]
+
+[node name="Health" type="Label" parent="."]
+margin_left = -82.6598
+margin_top = -123.43
+margin_right = 33.3402
+margin_bottom = -77.4302
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "vida"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
