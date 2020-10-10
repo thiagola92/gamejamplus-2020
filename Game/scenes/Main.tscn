@@ -79,7 +79,7 @@ position = Vector2( 106.728, 432.278 )
 z_index = 1
 
 [node name="Wall" parent="." instance=ExtResource( 3 )]
-position = Vector2( 427, 418 )
+position = Vector2( 227.452, 426.855 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Light2D" type="Light2D" parent="."]
@@ -95,9 +95,6 @@ position = Vector2( 540.732, 320.986 )
 scale = Vector2( 4.2508, 2.55031 )
 z_index = -1
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="set2_tiles" type="Sprite" parent="."]
 position = Vector2( 334.667, 280.82 )
