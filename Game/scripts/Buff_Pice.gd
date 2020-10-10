@@ -10,7 +10,6 @@ onready var obj = get_parent().get_node("Guarana")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite.play("default")
-	
 	pass # Replace with function body.
 
 
@@ -22,4 +21,4 @@ func _ready():
 
 func _on_Buff_Pice_body_entered(body):
 	obj.get_buff("pice")
-	get_parent().remove_child(self)
+	queue_free()
