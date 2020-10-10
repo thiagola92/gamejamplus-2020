@@ -3,10 +3,10 @@
 [ext_resource path="res://assets/tilesets/spritesheet_tiles.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Wall.gd" type="Script" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 43.5834, 126.613 )
 
-[sub_resource type="TileSet" id=3]
+[sub_resource type="TileSet" id=2]
 0/name = "spritesheet_tiles.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -43,10 +43,10 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 3 )
+tile_set = SubResource( 2 )
 format = 1
 tile_data = PoolIntArray( -65537, 1, 0, 65535, 0, 0 )
 
