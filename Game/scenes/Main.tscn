@@ -24,8 +24,9 @@ texture = ExtResource( 1 )
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 472.697, 486.522 )
 
-[node name="Wall" parent="." instance=ExtResource( 3 )]
-position = Vector2( 297.575, 418.712 )
-
-[node name="Node2D" parent="." instance=ExtResource( 2 )]
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( -34.0926, 500.114 )
+
+[node name="Wall" parent="." instance=ExtResource( 3 )]
+position = Vector2( 288.358, 415.42 )
+script = null

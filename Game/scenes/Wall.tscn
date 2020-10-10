@@ -1,14 +1,38 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/obstacles/wall.png" type="Texture" id=1]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends KinematicBody2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+var direcao
+
+func _physics_process(delta):
+	move_and_slide(direcao * 150)
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	direcao = Vector2()
+	direcao.y = 1
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 40.3918, 108.231 )
 
 [node name="Wall" type="KinematicBody2D"]
+script = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.720187, 0.720187 )
