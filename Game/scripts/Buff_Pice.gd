@@ -5,7 +5,7 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
-onready var obj = get_parent().get_node("Guarana")
+# onready var obj = get_parent().get_node("Guarana")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,6 +20,6 @@ func _ready():
 #	pass
 
 
-func _on_Buff_Pice_body_entered(body):
-	obj.get_buff("pice")
-	get_parent().remove_child(self)
+#func _on_Buff_Pice_body_entered(body):
+#	obj.get_buff("pice")
+#	get_parent().remove_child(self)
