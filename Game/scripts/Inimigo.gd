@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 export var speed = 400
 export var direction = 1
@@ -15,4 +15,4 @@ func _on_Enemy_area_entered(area):
 	$AnimatedSprite.play("attack")
 	speed = 0
 	
-	area
+	print(area)
