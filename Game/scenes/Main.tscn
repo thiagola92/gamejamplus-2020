@@ -74,9 +74,11 @@ position = Vector2( 513.099, 473.023 )
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 66.563, 486.414 )
+z_index = 1
 
 [node name="Wall" parent="." instance=ExtResource( 3 )]
-position = Vector2( 390.732, 414.631 )
+position = Vector2( 227.452, 426.855 )
+scale = Vector2( 0.7, 0.7 )
 script = null
 
 [node name="Light2D" type="Light2D" parent="."]
