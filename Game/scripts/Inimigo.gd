@@ -24,22 +24,36 @@ func _process(delta):
 		if can_attack && target.get_name() == "Wall":
 			can_attack = false
 			
-			var alive = target.hit()
+			target.hit()
 			$AttackTimer.start()
-			
-			if alive == false:
-				targets.erase(target)
 			
 			break
 
 func _on_Enemy_area_entered(area):
-	$AnimatedSprite.play("attack")
-	speed = 0
-	
-	targets.append(area)
+	if area.get_name() == "Wall":
+		$AnimatedSprite.play("attack")
+		speed = 0
+		
+		targets.append(area)
+
+func _on_Enemy_area_exited(area):
+	targets.erase(area)
 
 func _on_AttackTimer_timeout():
 	can_attack = true
 
 func hit():
 	health -= 1
+
+func _on_Enemy_body_entered(body):
+	if body.get_name() == "Player":
+		$AnimatedSprite.play("attack")
+		speed = 0
+		
+		targets.append(body)
+	else:
+		position.x -= 100
+		health -= 10
+		
+		if health <= 0:
+			get_parent().remove_child(self)

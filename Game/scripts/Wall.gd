@@ -15,15 +15,12 @@ func hit():
 	
 	if health == 0:
 		kill_tree()
-		return false
 	elif health <= 25:
 		$AnimatedSprite.play("low")
 	elif health <= 50:
 		$AnimatedSprite.play("half-low")
 	elif health <= 75:
 		$AnimatedSprite.play("half-high")
-		
-	return true
 
 func grow_tree():
 	$AnimatedSprite.play("growing")
