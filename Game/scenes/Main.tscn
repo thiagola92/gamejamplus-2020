@@ -58,7 +58,7 @@ extents = Vector2( 508.202, 68.3993 )
 2/z_index = 0
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( -11.8504, 6.58344 )
+position = Vector2( -2.24572, -23.1038 )
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 
@@ -75,7 +75,7 @@ tile_data = PoolIntArray( 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0
 position = Vector2( 513.099, 473.023 )
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 55.3257, 430.977 )
+position = Vector2( 106.728, 432.278 )
 z_index = 1
 
 [node name="Wall" parent="." instance=ExtResource( 3 )]
@@ -121,3 +121,8 @@ position = Vector2( 643.515, 447.929 )
 [node name="Buff_Pice" parent="." instance=ExtResource( 9 )]
 position = Vector2( 902.867, 445.816 )
 scale = Vector2( 0.3, 0.3 )
+
+[node name="Buff_Time" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+[connection signal="timeout" from="Buff_Time" to="Guarana" method="_on_Buff_Time_timeout"]
