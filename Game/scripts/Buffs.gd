@@ -13,7 +13,9 @@ onready var obj = get_parent().get_node("Player")
 
 func _physics_process(delta):
 	var vector =  obj.global_position - global_position
-	if vector.x > 0:
+	if vector.x < 150 and vector.x > -150:
+		vector.x = 0
+	elif vector.x > 0:
 		vector.x -= 150
 	elif vector.x < 0:
 		vector.x += 150
