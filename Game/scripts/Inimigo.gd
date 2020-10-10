@@ -12,7 +12,7 @@ func _physics_process(delta):
 	var collision = move_and_collide(direcao * delta)
 	if (collision):
 		if (collision.CONNECT_PERSIST):
-			$AnimatedSprite.stop()
+			$AnimatedSprite.play("attack")
 	else:
 		 $AnimatedSprite.play("run")
 	
