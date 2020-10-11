@@ -17,6 +17,15 @@ func _process(delta):
 		$Audio.play(0)
 		get_parent().get_node("Label").hide()
 		get_parent().get_node("Label2").hide()
+		get_parent().get_node("Movimentar").hide()
+		get_parent().get_node("Atacar").hide()
+		get_parent().get_node("Plantar").hide()
+		get_parent().get_node("E").hide()
+		get_parent().get_node("Space").hide()
+		get_parent().get_node("A").hide()
+		get_parent().get_node("W").hide()
+		get_parent().get_node("S").hide()
+		get_parent().get_node("D").hide()
 		next = true
 	if $AnimatedSprite.animation == "gb":
 		move_and_slide(Vector2(-207, 45))
