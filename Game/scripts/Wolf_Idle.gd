@@ -16,6 +16,7 @@ func _process(delta):
 		$AnimatedSprite.play("gb")
 		get_parent().get_node("Label").hide()
 		get_parent().get_node("Label2").hide()
+		$Audio.play(0)
 		next = true
 		move_and_slide(Vector2(-2200, 380))
 
