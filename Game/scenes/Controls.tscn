@@ -12,6 +12,7 @@ margin_left = 870.0
 margin_top = 500.0
 margin_right = 950.0
 margin_bottom = 580.0
+disabled = true
 icon = ExtResource( 1 )
 expand_icon = true
 __meta__ = {

@@ -37,6 +37,7 @@ func _physics_process(delta):
 func get_buff(buffs):
 	if buffs == "pice":
 		$AnimatedSprite.play(sprout)
+		get_node("../Player/Control/Seed").disabled = false
 		buff_active = true
 	else:
 		$AnimatedSprite.play(default)
@@ -47,6 +48,7 @@ func get_buff(buffs):
 
 func lost_buff():
 	$AnimatedSprite.play(default)
+	get_node("../Player/Control/Seed").disabled = true
 	buff_active = false
 
 func _on_Buff_Time_timeout():
