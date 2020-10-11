@@ -25,7 +25,7 @@ func _process(delta):
 		speed = 400
 		
 	for target in targets:
-		if can_attack && target.get_name() == "Wall":
+		if can_attack && "Wall" in target.get_name():
 			can_attack = false
 			
 			target.hit()

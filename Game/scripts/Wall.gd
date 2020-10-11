@@ -1,10 +1,11 @@
 extends Area2D
 
-export var health = 10
+export var max_health = 100
+export var health = 0
 
 func _ready():
 	grow_tree()
-	pass
+	health = max_health
 
 func _process(delta):
 	$Health.text = str(health)
@@ -14,11 +15,11 @@ func hit():
 	
 	if health == 0:
 		kill_tree()
-	elif health <= 25:
+	elif health <= max_health * 0.25:
 		$AnimatedSprite.play("low")
-	elif health <= 50:
+	elif health <= max_health * 0.5:
 		$AnimatedSprite.play("half-low")
-	elif health <= 75:
+	elif health <= max_health * 0.75:
 		$AnimatedSprite.play("half-high")
 
 func grow_tree():

@@ -4,29 +4,29 @@
 [ext_resource path="res://assets/buffs/sprout_1.png" type="Texture" id=4]
 [ext_resource path="res://assets/buffs/sprout_2.png" type="Texture" id=5]
 
-[sub_resource type="StreamTexture" id=2]
+[sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/hammer_1.png-619a240c9c2b956e69bb0068bc36945e.stex"
 
-[sub_resource type="StreamTexture" id=3]
+[sub_resource type="StreamTexture" id=2]
 flags = 4
 load_path = "res://.import/hammer_2.png-ed767629c1840dd6f48a9d19c49db468.stex"
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ null ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "hammer",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "sprout",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "hammer",
 "speed": 5.0
 } ]
 
@@ -36,5 +36,5 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -14.4579, 15.8696 )
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 offset = Vector2( 14.4579, -15.8696 )

@@ -26,7 +26,7 @@ func _on_Spawn_Enemy_timeout():
 		var rng = RandomNumberGenerator.new()
 		rng.randomize()
 		var random_number = rng.randf_range(1, 10.0)
-		print(random_number)
+		
 		if int(random_number) % 2:
 			enemy.move_local_x(-2500)
 		else:
