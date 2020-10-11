@@ -12,13 +12,14 @@ func _ready():
 	pass # Replace with function body.
 	
 func _process(delta):
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") and $AnimatedSprite.animation == "default":
 		$AnimatedSprite.play("gb")
+		$Audio.play(0)
 		get_parent().get_node("Label").hide()
 		get_parent().get_node("Label2").hide()
-		$Audio.play(0)
 		next = true
-		move_and_slide(Vector2(-2200, 380))
+	if $AnimatedSprite.animation == "gb":
+		move_and_slide(Vector2(-207, 45))
 
 
 func _on_AnimatedSprite_animation_finished():
@@ -26,3 +27,4 @@ func _on_AnimatedSprite_animation_finished():
 		$AnimatedSprite.set_frame(7)
 		$AnimatedSprite.stop()
 		get_tree().change_scene("res://scenes/Level 1.tscn")
+		queue_free()
