@@ -295,6 +295,8 @@ position = Vector2( 1318.47, 413.604 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="Buff" parent="." instance=ExtResource( 12 )]
+position = Vector2( 700, 380 )
+z_index = 1
 
 [node name="Buff_Time" type="Timer" parent="."]
 wait_time = 5.0
