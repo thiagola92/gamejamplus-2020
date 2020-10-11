@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/Buffs.gd" type="Script" id=1]
+[ext_resource path="res://assets/sounds/powerUp.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/buffs/sprout_1.png" type="Texture" id=4]
 [ext_resource path="res://assets/buffs/sprout_2.png" type="Texture" id=5]
 
@@ -19,14 +20,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "sprout",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
 "name": "hammer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "sprout",
 "speed": 5.0
 } ]
 
@@ -38,3 +39,7 @@ position = Vector2( -14.4579, 15.8696 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 offset = Vector2( 14.4579, -15.8696 )
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+volume_db = -20.0

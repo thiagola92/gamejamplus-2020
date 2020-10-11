@@ -36,6 +36,7 @@ func _unhandled_key_input(event):
 		$AttackCollision/AnimatedSprite.show()
 		$AttackCollision/Timer.start()
 		$AttackCollision/CD.start()
+		$Audio.play(0)
 		emit_signal("toggle_off_attack")
 		can_attack = false
 

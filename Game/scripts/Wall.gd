@@ -16,6 +16,8 @@ func hit():
 	if health == 0:
 		kill_tree()
 	elif health <= max_health * 0.25:
+		if health == 25:
+			$Audio.play(0)
 		$AnimatedSprite.play("low")
 	elif health <= max_health * 0.5:
 		$AnimatedSprite.play("half-low")
@@ -27,5 +29,4 @@ func grow_tree():
 
 func kill_tree():
 #	get_parent().remove_child(self)
-	$Audio.play(0)
 	queue_free()
