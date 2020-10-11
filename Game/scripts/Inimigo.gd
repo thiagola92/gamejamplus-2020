@@ -11,6 +11,9 @@ var targets = []
 func _ready():
 	$AnimatedSprite.play("run")
 
+func set_direction(dir):
+	direction = dir
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position.x += speed * direction * delta

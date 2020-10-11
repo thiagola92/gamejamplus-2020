@@ -9,7 +9,7 @@ extends Label
 # Called when the node enters the scene tree for the first time.
 var elapsed = 0.0
 
-var daylight = true
+var daylight = false
 
 func _process(delta):
 	if daylight == true:
@@ -32,12 +32,14 @@ func _process(delta):
 	elapsed += delta
 	self.text = str(int(elapsed))
 
-	if elapsed >= 10.0:
+	if elapsed >= 60.0:
 		elapsed = 0.0
 		if daylight == true:
 			daylight = false
+			get_parent().get_node("../Spawn_Enemy").stop()
 		else:
 			daylight = true
+			get_parent().get_node("../Spawn_Enemy").start()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
