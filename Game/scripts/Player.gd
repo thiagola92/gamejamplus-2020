@@ -16,4 +16,3 @@ func _process(delta):
 		position.x += speed * delta
 	else:
 		$AnimatedSprite.stop()
-	
