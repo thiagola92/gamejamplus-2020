@@ -28,19 +28,21 @@ func _process(delta):
 	else:
 		$AnimatedSprite.stop()
 		
-	self.move_and_collide(velocity)
+	move_and_collide(velocity)
 
 func _unhandled_key_input(event):
 	if event.pressed and event.scancode == KEY_E and can_attack:
 		$AttackCollision/CollisionShape2D.disabled = false
 		$AttackCollision/AnimatedSprite.show()
 		$AttackCollision/Timer.start()
+		$AttackCollision/CD.start()
 		emit_signal("toggle_off_attack")
 		can_attack = false
 
 func _on_Timer_timeout():
 	$AttackCollision/AnimatedSprite.hide()
 	$AttackCollision/CollisionShape2D.disabled = true
-	$AttackCollision/Timer.stop()
-	emit_signal("toggle_on_attack")
+
+func _on_CD_timeout():
 	can_attack = true
+	emit_signal("toggle_on_attack")
