@@ -6,6 +6,7 @@ extends Area2D
 # var b = "text"
 
 onready var obj = get_parent().get_node("Buff")
+onready var timer = get_parent().get_node("Spawn_Buff")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,4 +21,5 @@ func _process(delta):
 
 func _on_Buff_Pice_body_entered(body):
 	obj.get_buff("pice")
+	timer.start()
 	get_parent().remove_child(self)
