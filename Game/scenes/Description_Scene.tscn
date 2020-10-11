@@ -63,7 +63,7 @@ margin_top = 8.49431
 margin_right = 977.067
 margin_bottom = 292.494
 custom_fonts/font = SubResource( 1 )
-text = "Guaraná é um Lobo Guará que sofreu com a caça ilegal e foi salvo pelas mãos da deusa Ceuci, depois passou a se dedicar a proteção da floresta amazônica. Recentemente madeireiros e mineradores começaram a tentar invadir as aldeias indígenas para conseguir explorar flora local. Guaraná deve buscar a benção da deusa Ceuci para proteger a aldeia dos ataques."
+text = "Ná é um Lobo Guará que sofreu com a caça ilegal e foi salvo pelas mãos da deusa Ceuci, depois passou a se dedicar a proteção da floresta amazônica. Recentemente madeireiros e mineradores começaram a tentar invadir as aldeias indígenas para conseguir explorar flora local. Ná deve buscar a benção da deusa Ceuci para proteger a aldeia dos ataques."
 align = 1
 valign = 1
 autowrap = true
@@ -89,7 +89,7 @@ script = ExtResource( 11 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Wolf_Idle"]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
-frame = 9
+frame = 19
 playing = true
 flip_h = true
 
