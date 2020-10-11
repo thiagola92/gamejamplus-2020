@@ -17,11 +17,11 @@ func _ready():
 func _process(delta):
 	var velocity = Vector2()
 	
-	if Input.is_key_pressed(KEY_A):
+	if Input.is_action_pressed("ui_left"):
 		$AnimatedSprite.play("walking_left")
 		$AttackCollision.position.x = -250
 		velocity.x = speed * delta * -1
-	elif Input.is_key_pressed(KEY_D):
+	elif Input.is_action_pressed("ui_right"):
 		$AnimatedSprite.play("walking_right")
 		$AttackCollision.position.x = 250
 		velocity.x = speed * delta

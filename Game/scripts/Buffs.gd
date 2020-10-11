@@ -25,7 +25,7 @@ func _physics_process(delta):
 	var dir = (vector).normalized()
 	move_and_slide(dir * speed)
 	
-	if buff_active and Input.is_key_pressed(KEY_SPACE):
+	if buff_active and Input.is_action_just_pressed("ui_accept"):
 		var tree_resource = preload("../scenes/Wall.tscn")
 		var tree = tree_resource.instance()
 		var position = get_node("../Player").position
