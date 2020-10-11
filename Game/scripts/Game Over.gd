@@ -10,6 +10,7 @@ var selected = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite2.hide()
+	$Audio.play(0)
 	pass # Replace with function body.
 
 func _process(delta):

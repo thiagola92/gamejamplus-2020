@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/particles/right.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Game Over.gd" type="Script" id=3]
+[ext_resource path="res://assets/sounds/gameover.wav" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -67,3 +68,7 @@ position = Vector2( 385.999, 364.494 )
 scale = Vector2( 0.542681, 0.548126 )
 frames = SubResource( 3 )
 playing = true
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
