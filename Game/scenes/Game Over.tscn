@@ -45,9 +45,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_left = 416.522
+margin_top = 343.506
+margin_right = 654.522
+margin_bottom = 390.506
+custom_fonts/normal_font = SubResource( 2 )
+text = "Créditos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 387.088, 285.008 )
+position = Vector2( 385.455, 284.464 )
 scale = Vector2( 0.542681, 0.548126 )
 frames = SubResource( 3 )
-frame = 1
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 385.999, 364.494 )
+scale = Vector2( 0.542681, 0.548126 )
+frames = SubResource( 3 )
 playing = true

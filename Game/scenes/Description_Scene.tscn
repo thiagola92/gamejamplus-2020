@@ -89,12 +89,12 @@ script = ExtResource( 11 )
 position = Vector2( 859.744, 364.041 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
-frame = 10
+frame = 11
 playing = true
 flip_h = true
 
 [node name="Audio" type="AudioStreamPlayer" parent="Wolf_Idle"]
 stream = ExtResource( 35 )
 volume_db = -30.0
-[connection signal="animation_finished" from="Wolf_Idle/AnimatedSprite" to="Wolf_Idle" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="Wolf_Idle/AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="animation_finished" from="Wolf_Idle/AnimatedSprite" to="Wolf_Idle" method="_on_AnimatedSprite_animation_finished"]
