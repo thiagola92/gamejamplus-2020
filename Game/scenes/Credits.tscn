@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/Credits.gd" type="Script" id=2]
 [ext_resource path="res://assets/particles/right.png" type="Texture" id=3]
+[ext_resource path="res://assets/other/Chromatic Path.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -32,6 +33,14 @@ animations = [ {
 "speed": 2.0
 } ]
 
+[sub_resource type="DynamicFont" id=7]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 25
+font_data = ExtResource( 1 )
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -49,10 +58,10 @@ __meta__ = {
 }
 
 [node name="Back" type="Label" parent="."]
-margin_left = 321.176
-margin_top = 460.497
-margin_right = 757.176
-margin_bottom = 528.497
+margin_left = 688.665
+margin_top = 520.384
+margin_right = 1124.66
+margin_bottom = 588.384
 custom_fonts/font = SubResource( 5 )
 text = "Voltar"
 align = 1
@@ -145,7 +154,35 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 428.737, 492.435 )
+position = Vector2( 800.036, 555.588 )
 scale = Vector2( 0.624345, 0.613457 )
 frames = SubResource( 6 )
 playing = true
+
+[node name="Produced" type="Label" parent="."]
+margin_left = 46.5994
+margin_top = 380.0
+margin_right = 360.599
+margin_bottom = 425.0
+custom_fonts/font = SubResource( 7 )
+text = "Produced By: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 94.1859
+margin_top = 449.697
+margin_right = 308.186
+margin_bottom = 542.697
+custom_fonts/font = SubResource( 8 )
+text = "Stephanie Fay
+Thiago Lages
+Lucas Hardman"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chromatic Path" type="Sprite" parent="."]
+position = Vector2( 559.748, 459.677 )
+texture = ExtResource( 4 )
