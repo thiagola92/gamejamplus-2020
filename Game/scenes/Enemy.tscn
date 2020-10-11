@@ -55,4 +55,5 @@ __meta__ = {
 [connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_Enemy_area_exited"]
 [connection signal="body_entered" from="." to="." method="_on_Enemy_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Enemy_body_exited"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]

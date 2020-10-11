@@ -35,6 +35,12 @@ func _on_Enemy_area_entered(area):
 		speed = 0
 		
 		targets.append(area)
+	elif area.get_name() == "AttackCollision":
+		position.x -= 100
+		health -= 10
+		
+		if health <= 0:
+			get_parent().remove_child(self)
 
 func _on_Enemy_area_exited(area):
 	targets.erase(area)
@@ -51,9 +57,10 @@ func _on_Enemy_body_entered(body):
 		speed = 0
 		
 		targets.append(body)
-	else:
-		position.x -= 100
-		health -= 10
+
+func _on_Enemy_body_exited(body):
+	if body.get_name() == "Player":
+		$AnimatedSprite.play("run")
+		speed = 400
 		
-		if health <= 0:
-			get_parent().remove_child(self)
+		targets.erase(body)
