@@ -52,17 +52,3 @@ func _on_AttackTimer_timeout():
 
 func hit():
 	health -= 1
-
-func _on_Enemy_body_entered(body):
-	if body.get_name() == "Player":
-		$AnimatedSprite.play("attack")
-		speed = 0
-		
-		targets.append(body)
-
-func _on_Enemy_body_exited(body):
-	if body.get_name() == "Player":
-		$AnimatedSprite.play("run")
-		speed = 400
-		
-		targets.erase(body)
