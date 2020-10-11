@@ -5,6 +5,7 @@ export var direction = 1
 export var health = 30
 
 var can_attack = true
+var invulnerable = false
 var targets = []
 
 # Called when the node enters the scene tree for the first time.
@@ -40,9 +41,11 @@ func _on_Enemy_area_entered(area):
 		speed = 0
 		
 		targets.append(area)
-	elif "AttackCollision" in area.get_name():
+	elif "AttackCollision" in area.get_name() and invulnerable == false:
 		position.x += -100 * direction
 		health -= 10
+		invulnerable = true
+		$Invulnerable.start()
 		
 		if health <= 0:
 			get_parent().remove_child(self)
@@ -55,3 +58,7 @@ func _on_AttackTimer_timeout():
 
 func hit():
 	health -= 1
+
+
+func _on_Invulnerable_timeout():
+	invulnerable = false
