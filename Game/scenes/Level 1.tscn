@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/tilesets/tilesheet_complete_2X.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://assets/Kenney Future Narrow.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://scripts/Spawn_Buff.gd" type="Script" id=14]
 [ext_resource path="res://scripts/Spawn_Enemy.gd" type="Script" id=15]
-[ext_resource path="res://assets/obstacles/rock.png" type="Texture" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tilesheet_complete_2X.png 0"
@@ -219,9 +218,6 @@
 size = 42
 font_data = ExtResource( 13 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 82.3964, 109.065 )
-
 [node name="Node2D" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -321,29 +317,6 @@ script = ExtResource( 14 )
 [node name="Spawn_Enemy" type="Timer" parent="."]
 wait_time = 5.0
 script = ExtResource( 15 )
-
-[node name="Rock" type="StaticBody2D" parent="."]
-position = Vector2( -1783.36, 399.187 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock"]
-shape = SubResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="Rock"]
-position = Vector2( 0.374634, 30.3407 )
-scale = Vector2( 1.28679, 1.28679 )
-texture = ExtResource( 16 )
-
-[node name="Stop" type="StaticBody2D" parent="."]
-position = Vector2( 4532.35, 399.187 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stop"]
-shape = SubResource( 3 )
 [connection signal="timeout" from="Buff_Time" to="Buff" method="_on_Buff_Time_timeout"]
 [connection signal="timeout" from="Spawn_Buff" to="Spawn_Buff" method="_on_Spawn_Buff_timeout"]
 [connection signal="timeout" from="Spawn_Enemy" to="Spawn_Enemy" method="_on_Spawn_Enemy_timeout"]

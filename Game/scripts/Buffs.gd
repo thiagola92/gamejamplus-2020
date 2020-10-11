@@ -28,8 +28,9 @@ func _physics_process(delta):
 	if buff_active and Input.is_key_pressed(KEY_SPACE):
 		var tree_resource = preload("../scenes/Wall.tscn")
 		var tree = tree_resource.instance()
-		tree.set_global_position(self.position)
-#		tree.move_local_y(self.position.y - 20)
+		var position = get_node("../Player").position
+		position.y -= 90
+		tree.position = position
 		get_parent().add_child(tree)
 		lost_buff()
 
