@@ -2,7 +2,7 @@ extends Area2D
 
 export var speed = 400
 export var direction = 1
-export var health = 100
+export var health = 30
 
 var can_attack = true
 var targets = []
@@ -41,7 +41,7 @@ func _on_Enemy_area_entered(area):
 		
 		targets.append(area)
 	elif "AttackCollision" in area.get_name():
-		position.x -= 100
+		position.x += -100 * direction
 		health -= 10
 		
 		if health <= 0:
