@@ -5,19 +5,17 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
-onready var obj = get_parent().get_node("Buff")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimatedSprite.play("default")
-	
 	pass # Replace with function body.
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _process(delta):
+#	pass
 
 
-func _on_Buff_Pice_body_entered(body):
-	obj.get_buff("pice")
-	get_parent().remove_child(self)
+func _on_Game_Over_Zone_area_entered(area):
+	if "Enemy" in area.get_name():
+		get_tree().change_scene("res://scenes/Game Over.tscn")

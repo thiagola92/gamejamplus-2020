@@ -39,7 +39,9 @@ func _process(delta):
 			get_parent().get_node("../Spawn_Enemy").stop()
 		else:
 			daylight = true
-			get_parent().get_node("../Spawn_Enemy").start()
+			var node = get_parent().get_node("../Spawn_Enemy")
+			node.increase_difficulty()
+			node.start()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

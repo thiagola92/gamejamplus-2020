@@ -1,5 +1,6 @@
 extends Timer
 
+export var difficulty = 0
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -15,18 +16,22 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func increase_difficulty():
+	difficulty += 1
 
 func _on_Spawn_Enemy_timeout():
-	var enemy_resource = preload("../scenes/Enemy.tscn")
-	var enemy = enemy_resource.instance()
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	var random_numer = rng.randf_range(1, 10.0)
-	if int(random_numer) % 2:
-		enemy.move_local_x(-2500)
-	else:
-		enemy.move_local_x(4200)
-		enemy.set_direction(-1)
-		enemy.get_node("AnimatedSprite").set_flip_h(true)
-	enemy.move_local_y(426)
-	get_parent().add_child(enemy)
+	for i in difficulty:
+		var enemy_resource = preload("../scenes/Enemy.tscn")
+		var enemy = enemy_resource.instance()
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		var random_number = rng.randf_range(1, 10.0)
+		print(random_number)
+		if int(random_number) % 2:
+			enemy.move_local_x(-2500)
+		else:
+			enemy.move_local_x(4200)
+			enemy.set_direction(-1)
+			enemy.get_node("AnimatedSprite").set_flip_h(true)
+		enemy.move_local_y(426)
+		get_parent().add_child(enemy)
