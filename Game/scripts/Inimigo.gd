@@ -31,13 +31,13 @@ func _process(delta):
 			break
 
 func _on_Enemy_area_entered(area):
-	if area.get_name() == "Wall":
+	if "Wall" in area.get_name():
 		$AnimatedSprite.play("attack")
 		$HitSound.play(0)
 		speed = 0
 		
 		targets.append(area)
-	elif area.get_name() == "AttackCollision":
+	elif "AttackCollision" in area.get_name():
 		position.x -= 100
 		health -= 10
 		
