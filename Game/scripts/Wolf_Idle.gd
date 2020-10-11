@@ -12,7 +12,7 @@ func _ready():
 	pass # Replace with function body.
 	
 func _process(delta):
-	if Input.is_key_pressed(KEY_SPACE):
+	if Input.is_action_just_pressed("ui_accept"):
 		$AnimatedSprite.play("gb")
 		get_parent().get_node("Label").hide()
 		get_parent().get_node("Label2").hide()

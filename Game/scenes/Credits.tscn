@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://scripts/Game Over.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Credits.gd" type="Script" id=2]
+[ext_resource path="res://assets/particles/right.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -19,14 +24,22 @@ font_data = ExtResource( 1 )
 size = 40
 font_data = ExtResource( 1 )
 
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 3 ), null ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 
 [node name="Assets" type="Label" parent="."]
-margin_left = 270.0
-margin_top = 1.0
-margin_right = 706.0
-margin_bottom = 69.0
+margin_left = 316.276
+margin_top = 38.0211
+margin_right = 752.276
+margin_bottom = 106.021
 custom_fonts/font = SubResource( 1 )
 text = "Assets"
 align = 1
@@ -35,11 +48,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Back" type="Label" parent="."]
+margin_left = 321.176
+margin_top = 460.497
+margin_right = 757.176
+margin_bottom = 528.497
+custom_fonts/font = SubResource( 5 )
+text = "Voltar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Audio" type="Label" parent="."]
-margin_left = 75.0
-margin_top = 75.0
-margin_right = 246.0
-margin_bottom = 130.0
+margin_left = 100.0
+margin_top = 165.375
+margin_right = 271.0
+margin_bottom = 220.375
 custom_fonts/font = SubResource( 2 )
 text = "Audio"
 align = 1
@@ -49,10 +75,10 @@ __meta__ = {
 }
 
 [node name="Audio - Ref" type="Label" parent="."]
-margin_left = 39.6823
-margin_top = 142.477
-margin_right = 273.682
-margin_bottom = 235.477
+margin_left = 67.9925
+margin_top = 233.941
+margin_right = 301.992
+margin_bottom = 326.941
 custom_fonts/font = SubResource( 3 )
 text = "Kenney
 ZapSplat
@@ -64,10 +90,10 @@ __meta__ = {
 }
 
 [node name="Tool - Ref" type="Label" parent="."]
-margin_left = 750.0
-margin_top = 145.0
-margin_right = 907.0
-margin_bottom = 200.0
+margin_left = 789.743
+margin_top = 233.464
+margin_right = 946.743
+margin_bottom = 326.464
 custom_fonts/font = SubResource( 3 )
 text = "Godot
 ASEPRITE
@@ -79,10 +105,10 @@ __meta__ = {
 }
 
 [node name="Image - Ref" type="Label" parent="."]
-margin_left = 400.0
-margin_top = 145.0
-margin_right = 557.0
-margin_bottom = 200.0
+margin_left = 443.554
+margin_top = 234.553
+margin_right = 616.554
+margin_bottom = 295.553
 custom_fonts/font = SubResource( 3 )
 text = "Kenney
 Paper-Neko"
@@ -93,10 +119,10 @@ __meta__ = {
 }
 
 [node name="Image" type="Label" parent="."]
-margin_left = 400.0
-margin_top = 75.0
-margin_right = 571.0
-margin_bottom = 130.0
+margin_left = 450.0
+margin_top = 164.464
+margin_right = 621.0
+margin_bottom = 221.464
 custom_fonts/font = SubResource( 4 )
 text = "Image"
 align = 1
@@ -106,10 +132,10 @@ __meta__ = {
 }
 
 [node name="Tools" type="Label" parent="."]
-margin_left = 750.0
-margin_top = 75.0
-margin_right = 921.0
-margin_bottom = 130.0
+margin_left = 800.0
+margin_top = 164.464
+margin_right = 949.31
+margin_bottom = 221.464
 custom_fonts/font = SubResource( 4 )
 text = "Tools"
 align = 1
@@ -117,3 +143,10 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 428.737, 492.435 )
+scale = Vector2( 0.624345, 0.613457 )
+frames = SubResource( 6 )
+frame = 1
+playing = true
