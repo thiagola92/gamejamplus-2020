@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/set2_tiles.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://assets/background/sun.png" type="Texture" id=10]
 [ext_resource path="res://scripts/TimerPrint.gd" type="Script" id=11]
 [ext_resource path="res://assets/background/moon.png" type="Texture" id=12]
+[ext_resource path="res://assets/particles/spark_particle.png" type="Texture" id=13]
+[ext_resource path="res://assets/ceuci_tree.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 508.202, 68.3993 )
@@ -137,4 +139,16 @@ position = Vector2( 619.189, 372.639 )
 stream = ExtResource( 6 )
 volume_db = 0.6
 autoplay = true
+
+[node name="ceuci_tree" type="Sprite" parent="."]
+position = Vector2( 741.754, 291.766 )
+texture = ExtResource( 14 )
+
+[node name="Particles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 727.68, 201.215 )
+amount = 24
+lifetime = 4.0
+texture = ExtResource( 13 )
+emission_shape = 1
+emission_sphere_radius = 72.56
 [connection signal="timeout" from="Buff_Time" to="Buff" method="_on_Buff_Time_timeout"]
