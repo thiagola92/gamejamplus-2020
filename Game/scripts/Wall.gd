@@ -27,4 +27,5 @@ func grow_tree():
 
 func kill_tree():
 #	get_parent().remove_child(self)
+	$Audio.play(0)
 	queue_free()
