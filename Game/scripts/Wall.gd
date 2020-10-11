@@ -11,7 +11,6 @@ func _process(delta):
 
 func hit():
 	health -= 1
-	get_node("HitSound").play(0)
 	
 	if health == 0:
 		kill_tree()

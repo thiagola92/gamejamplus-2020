@@ -18,6 +18,7 @@ func _process(delta):
 	
 	if len(targets) <= 0:
 		$AnimatedSprite.play("run")
+		$HitSound.stop()
 		speed = 400
 		
 	for target in targets:
@@ -32,6 +33,7 @@ func _process(delta):
 func _on_Enemy_area_entered(area):
 	if area.get_name() == "Wall":
 		$AnimatedSprite.play("attack")
+		$HitSound.play(0)
 		speed = 0
 		
 		targets.append(area)
