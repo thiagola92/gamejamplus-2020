@@ -37,6 +37,7 @@ func _physics_process(delta):
 func get_buff(buffs):
 	if buffs == "pice":
 		$AnimatedSprite.play(sprout)
+		$Audio.play(0)
 		get_node("../Player/Control/Seed").disabled = false
 		buff_active = true
 	else:
