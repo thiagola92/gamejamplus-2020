@@ -7,6 +7,9 @@
 [ext_resource path="res://assets/tilesets/tilesheet_complete_2X.png" type="Texture" id=7]
 [ext_resource path="res://scenes/Buffs.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Buff_Pice.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/background/sun.png" type="Texture" id=10]
+[ext_resource path="res://scripts/TimerPrint.gd" type="Script" id=11]
+[ext_resource path="res://assets/background/moon.png" type="Texture" id=12]
 [ext_resource path="res://assets/particles/spark_particle.png" type="Texture" id=13]
 [ext_resource path="res://assets/ceuci_tree.png" type="Texture" id=14]
 
@@ -74,6 +77,27 @@ tile_data = PoolIntArray( 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 475.948, 449.944 )
 motion/sync_to_physics = true
+
+[node name="TimerPrint" type="Label" parent="Player"]
+margin_left = 490.0
+margin_top = -419.0
+margin_right = 536.0
+margin_bottom = -401.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "tempo"
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="moon" type="Sprite" parent="Player/TimerPrint"]
+position = Vector2( -842.734, 65.5893 )
+texture = ExtResource( 12 )
+
+[node name="sun" type="Sprite" parent="Player/TimerPrint"]
+position = Vector2( -841.2, 62.2752 )
+scale = Vector2( 0.740637, 0.740637 )
+texture = ExtResource( 10 )
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 106.728, 432.278 )
