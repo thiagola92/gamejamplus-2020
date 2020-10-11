@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+signal toggle_off_attack
+signal toggle_on_attack
+
 export var speed = 400
 
 var can_attack = true
@@ -13,7 +16,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2()
-	print(position.x)
+	
 	if Input.is_key_pressed(KEY_A):
 		$AnimatedSprite.play("walking_left")
 		$AttackCollision.position.x = -250
@@ -32,10 +35,12 @@ func _unhandled_key_input(event):
 		$AttackCollision/CollisionShape2D.disabled = false
 		$AttackCollision/AnimatedSprite.show()
 		$AttackCollision/Timer.start()
+		emit_signal("toggle_off_attack")
 		can_attack = false
 
 func _on_Timer_timeout():
 	$AttackCollision/AnimatedSprite.hide()
 	$AttackCollision/CollisionShape2D.disabled = true
 	$AttackCollision/Timer.stop()
+	emit_signal("toggle_on_attack")
 	can_attack = true
