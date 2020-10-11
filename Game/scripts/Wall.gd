@@ -26,4 +26,5 @@ func grow_tree():
 	$AnimatedSprite.play("growing")
 
 func kill_tree():
-	get_parent().remove_child(self)
+#	get_parent().remove_child(self)
+	queue_free()

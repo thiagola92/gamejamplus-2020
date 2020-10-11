@@ -20,4 +20,5 @@ func _process(delta):
 
 func _on_Buff_Pice_body_entered(body):
 	obj.get_buff("pice")
-	get_parent().remove_child(self)
+#	get_parent().remove_child(self)
+	queue_free()

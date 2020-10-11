@@ -48,7 +48,8 @@ func _on_Enemy_area_entered(area):
 		$Invulnerable.start()
 		
 		if health <= 0:
-			get_parent().remove_child(self)
+#			get_parent().remove_child(self)
+			queue_free()
 
 func _on_Enemy_area_exited(area):
 	targets.erase(area)
