@@ -21,7 +21,6 @@ func _process(delta):
 		
 	elapsed += delta
 	self.text = str(int(elapsed))
-	print(int(elapsed))
 	if elapsed >= 10.0:
 		elapsed = 0.0
 		if daylight == true:
