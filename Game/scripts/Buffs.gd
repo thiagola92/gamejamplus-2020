@@ -3,7 +3,7 @@ extends KinematicBody2D
 export var speed = 300
 
 var default = "default"
-var hammer = "hammer"
+var sprout = "sprout"
 
 var buff_active = false
 
@@ -36,7 +36,7 @@ func _physics_process(delta):
 
 func get_buff(buffs):
 	if buffs == "pice":
-		$AnimatedSprite.play(hammer)
+		$AnimatedSprite.play(sprout)
 		buff_active = true
 	else:
 		$AnimatedSprite.play(default)

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hammer_2.png-ed767629c1840dd6f48a9d19c49db468.stex"
+path="res://.import/sprout_2.png-db643f70b435635b7011d4b94b545661.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/buffs/hammer_2.png"
-dest_files=[ "res://.import/hammer_2.png-ed767629c1840dd6f48a9d19c49db468.stex" ]
+source_file="res://assets/buffs/sprout_2.png"
+dest_files=[ "res://.import/sprout_2.png-db643f70b435635b7011d4b94b545661.stex" ]
 
 [params]
 

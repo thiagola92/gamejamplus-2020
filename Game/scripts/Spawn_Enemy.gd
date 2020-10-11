@@ -17,7 +17,6 @@ func _ready():
 
 
 func _on_Spawn_Enemy_timeout():
-	print("enemy")
 	var enemy_resource = preload("../scenes/Enemy.tscn")
 	var enemy = enemy_resource.instance()
 	var rng = RandomNumberGenerator.new()
